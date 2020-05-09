@@ -20,3 +20,25 @@ consumer.subscriptions.create("RoomChannel", {
     return this.perform('speak');
   }
 });
+
+var submitMessages;
+
+$(document).on('turbolinks:load', function () {
+  // console.log('turbolinks loaded');
+  submitMessages()
+})
+
+submitMessages = function () {
+  $('#message_content').on('keydown', function (event) {
+    $('input').click()
+      // event.target.value = ''
+      // event.preventDefault()
+
+    // if (event.keyCode === 13) {
+    //   $('input').click()
+    //   event.target.value = ''
+    //   event.preventDefault()
+    //   console.log('We hitted Enter');
+    // } 
+  })
+}
